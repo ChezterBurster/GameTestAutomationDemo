@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GameTestAutomationDemo.Core/GameTestAutomationDemo.Core.csproj" />
+    <Project Path="src/GameTestAutomationDemo.GameObjects/GameTestAutomationDemo.GameObjects.csproj" />
+    <Project Path="src/GameTestAutomationDemo.Input/GameTestAutomationDemo.Input.csproj" />
+    <Project Path="src/GameTestAutomationDemo.Reporting/GameTestAutomationDemo.Reporting.csproj" />
+    <Project Path="src/GameTestAutomationDemo.Tests/GameTestAutomationDemo.Tests.csproj" />
+    <Project Path="src/GameTestAutomationDemo.Vision/GameTestAutomationDemo.Vision.csproj" />
+  </Folder>
+
+</Solution>

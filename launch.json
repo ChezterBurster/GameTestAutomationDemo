@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run GameTestAutomationDemo",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/GameTestAutomationDemo.Core/bin/Debug/net8.0/GameTestAutomationDemo.Core.dll"
+    }
+  ]
+}
