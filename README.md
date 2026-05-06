@@ -7,36 +7,40 @@ This project demonstrates how to automate user flows in non-DOM environments (su
 ## 🚀 Features
 
 - 🧠 Computer Vision (OpenCV)
-- 🖱️ Input Automation (Mouse simulation)
-- 🧪 Test Framework (NUnit)
+- 🖱️ Input Automation (Mouse, Game-controller simulation)
+- 🧪 Test Framework (XUnit)
 - ⏱️ Smart waits for non-deterministic systems
 - 📸 Screenshot-based validation
 - 📊 Test reporting (logs + screenshots)
-- 🔄 CI-ready
 
 ## 🏗️ Architecture
 
 - **Core** → Orchestration logic
 - **Vision** → Detection via template matching
 - **Input** → Mouse automation
-- **Tests** → Test cases (NUnit)
+- **Tests** → Test cases (XUnit)
 - **Reporting** → Logs and execution artifacts
+- **GameObjects** → PageObjectModel implementation
 
 
 ## 🧩 Tech Stack
 
 - C# (.NET 8)
 - OpenCvSharp
-- NUnit
+- XUnit
 - WinAPI (mouse input)
 
 ## 📦 Setup
 
+0. Pre-requisits:
+
+    -Brawlhalla installed via Steam.
+
 1. Clone repo:
 
 ```bash
-git clone https://github.com/your-username/GameQAAutomation.git
-cd GameQAAutomation
+git clone https://github.com/ChezterBurster/GameTestAutomationDemo.git
+cd GameTestAutomationDemo
 ```
 
 2. Restore dependencies:
@@ -54,23 +58,21 @@ dotnet test
 ## 🧪 Example Test
 
 ```C#
-[Test]
-public void Should_Open_Settings_Menu()
-{
-    var main = new MainMenu();
-    var settings = new SettingsMenu();
+    [Fact]
+    public void Should_Launch_And_Navigate_To_Online_Play()
+    {
+        MainMenu.AssertPlayButtonVisible();
 
-    main.OpenSettings();
-
-    Assert.IsTrue(settings.IsVisible());
-}
+        var modeSelection = MainMenu.GoToOnlinePlay();
+        modeSelection.AssertGameModesVisible();
+    }
 ```
 
 ## 🧠 How It Works
 
 1. Captures screen
 2. Detects UI elements via template matching
-3. Simulates mouse interaction
+3. Simulates user input
 4. Validates expected visual state
 5. Generates logs and screenshots
 
@@ -81,15 +83,6 @@ Each test generates:
 - Logs
 - Before/after screenshots
 - Pass/Fail result
-
-## 🔄 CI Integration
-
-Example GitHub Actions:
-
-```YAML
-- name: Run UI Tests
-  run: dotnet test
-```
 
 ## ⚠️ Disclaimer
 
