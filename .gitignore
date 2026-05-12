@@ -72,8 +72,8 @@ appsettings.Development.json
 # Screenshots / Reports
 # (QA Automation specific)
 # =========================
-reports/
-screenshots/
+# reports/
+# screenshots/
 recordings/
 
 # =========================
