@@ -201,7 +201,7 @@ td
 
         var relativePath = Path.GetRelativePath(
             session.TestPath,
-            log.ScreenshotPath);
+            log.ScreenshotPath).Replace("\\", "/");
 
         return $"""
 <br>
