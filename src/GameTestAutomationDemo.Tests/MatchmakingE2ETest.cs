@@ -13,5 +13,6 @@ public class MatchmakingE2ETest : TestBase
         var match = matchmaking.WaitForMatchStart();
 
         match.AssertHudVisible();
+        MarkTestAsPassed();
     }
 }

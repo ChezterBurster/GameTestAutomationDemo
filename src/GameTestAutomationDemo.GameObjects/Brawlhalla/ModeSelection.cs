@@ -7,11 +7,13 @@ public class ModeSelection
         Bot.WaitAndAssert("free_for_all_button");
         Bot.WaitAndAssert("friendly_2v2_button");
         Bot.WaitAndAssert("unranked_1v1_button");
+        Logger.Info("Mode Selection screen loaded.");
     }
 
     public CharacterSelection SelectFreeForAll()
     {
         Bot.Click("free_for_all_button");
+        Logger.Info("Game mode 'Free for all' selected.");
         return new CharacterSelection();
     }
 }

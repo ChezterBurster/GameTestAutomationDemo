@@ -122,4 +122,9 @@ public static class MouseController
 
         return (normalizedX, normalizedY);
     }
+
+    public static void Click(object x, object y)
+    {
+        throw new NotImplementedException();
+    }
 }

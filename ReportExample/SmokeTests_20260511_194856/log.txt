@@ -1,0 +1,49 @@
+[19:48:56] [INFO] START TEST: SmokeTests
+[19:48:56] [STEP] Starting game...
+[19:48:57] [STEP] Launching Brawlhalla via Steam...
+[19:48:57] [INFO] Screenshot saved: Steam_Command_Sent.
+[19:48:57] [STEP] Steam launch command sent
+[19:48:57] [INFO] Screenshot saved: Before_loading_screen.
+[19:48:57] [STEP] Waiting for 'loading_screen'...
+[19:49:05] [PASSED] Assertion passed: 'Point { X = 740, Y = 539 }' found
+[19:49:05] [INFO] Screenshot saved: After_loading_screen.
+[19:49:05] [INFO] Screenshot saved: Before_main_menu_logo.
+[19:49:05] [STEP] Waiting for 'main_menu_logo'...
+[19:49:30] [PASSED] Assertion passed: 'Point { X = 960, Y = 195 }' found
+[19:49:30] [INFO] Screenshot saved: After_main_menu_logo.
+[19:49:31] [INFO] Screenshot saved: Before_play_button.
+[19:49:31] [STEP] Waiting for 'play_button'...
+[19:49:31] [PASSED] Assertion passed: 'Point { X = 286, Y = 277 }' found
+[19:49:31] [INFO] Screenshot saved: After_play_button.
+[19:49:31] [INFO] Screenshot saved: Before_play_button.
+[19:49:31] [STEP] Waiting for 'play_button'...
+[19:49:31] [PASSED] Assertion passed: 'Point { X = 286, Y = 277 }' found
+[19:49:31] [INFO] Screenshot saved: After_play_button.
+[19:49:31] [STEP] Clicking on 'play_button'...
+[19:49:31] [INFO] Screenshot saved: AfterClicking_play_button.
+[19:49:32] [INFO] Screenshot saved: Before_mode_selection_title.
+[19:49:32] [STEP] Waiting for 'mode_selection_title'...
+[19:49:32] [PASSED] Assertion passed: 'Point { X = 947, Y = 245 }' found
+[19:49:32] [INFO] Screenshot saved: After_mode_selection_title.
+[19:49:32] [INFO] Screenshot saved: Before_1v1_strikeout_button.
+[19:49:32] [STEP] Waiting for '1v1_strikeout_button'...
+[19:49:32] [PASSED] Assertion passed: 'Point { X = 796, Y = 590 }' found
+[19:49:32] [INFO] Screenshot saved: After_1v1_strikeout_button.
+[19:49:32] [INFO] Screenshot saved: Before_free_for_all_button.
+[19:49:32] [STEP] Waiting for 'free_for_all_button'...
+[19:49:33] [PASSED] Assertion passed: 'Point { X = 364, Y = 585 }' found
+[19:49:33] [INFO] Screenshot saved: After_free_for_all_button.
+[19:49:33] [INFO] Screenshot saved: Before_friendly_2v2_button.
+[19:49:33] [STEP] Waiting for 'friendly_2v2_button'...
+[19:49:33] [PASSED] Assertion passed: 'Point { X = 1204, Y = 599 }' found
+[19:49:33] [INFO] Screenshot saved: After_friendly_2v2_button.
+[19:49:33] [INFO] Screenshot saved: Before_unranked_1v1_button.
+[19:49:33] [STEP] Waiting for 'unranked_1v1_button'...
+[19:49:33] [PASSED] Assertion passed: 'Point { X = 1617, Y = 598 }' found
+[19:49:33] [INFO] Screenshot saved: After_unranked_1v1_button.
+[19:49:33] [INFO] Mode Selection screen loaded.
+[19:49:33] [INFO] Screenshot saved: End_of_Test.
+[19:49:33] [STEP] Closing game...
+[19:49:33] [STEP] Closing Brawlhalla...
+[19:49:34] [INFO] Screenshot saved: Game_Closed.
+[19:49:34] [PASSED] TEST PASSED

@@ -1,4 +1,5 @@
 using Nefarius.ViGEm.Client.Targets.Xbox360;
+using OpenCvSharp;
 
 public class Bot
 {
@@ -7,13 +8,11 @@ public class Bot
         int timeoutSeconds = 5,
         double threshold = 0.8)
     {
-        var point = Waiter.WaitFor(element, timeoutSeconds, 200, threshold);
-
-        if (point == null)
-            throw new Exception($"Element '{element}' not found after {timeoutSeconds}s");
-
+        var point = WaitAndAssert(element, timeoutSeconds, threshold);
+        Logger.Step($"Clicking on '{element}'...");
         MouseController.Click(point.Value.X, point.Value.Y);
-        Thread.Sleep(50);
+        TestHelper.TakeScreenshot($"AfterClicking_{element}");
+        Thread.Sleep(300);
     }
 
     public static bool Exists(string element, double threshold = 0.8)
@@ -23,18 +22,20 @@ public class Bot
         return Waiter.WaitFor(element, timeoutSeconds: 1, pollIntervalMs: 100, threshold) != null;
     }
 
-    public static void WaitAndAssert(string element, int timeoutSeconds = 5, double threshold = 0.8)
+    public static Point? WaitAndAssert(string element, int timeoutSeconds = 5, double threshold = 0.8)
     {
+        TestHelper.TakeScreenshot($"Before_{element}");
+        Logger.Step($"Waiting for '{element}'...");
         var point = Waiter.WaitFor(element, timeoutSeconds, 200, threshold);
-
-        if (point == null)
-            throw new Exception($"Assertion failed: '{element}' not found");
-
-        Logger.Passed($"Assertion passed: '{element}' found");
+        TestHelper.AssertElemment(point, element, timeoutSeconds);
+        TestHelper.TakeScreenshot($"After_{element}");
+        return point;
     }
 
     public static void PressContinue(GamepadController pad)
     {
+        Logger.Step("Pressing continue button...");
         pad.PressButton(Xbox360Button.A, 200);
+        TestHelper.TakeScreenshot("After_continuebutton");
     }
 }

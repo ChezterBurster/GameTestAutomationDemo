@@ -34,7 +34,7 @@ public class VisionEngine
     // SCREEN CAPTURE
     // =============================
 
-    private static Mat Capture()
+    public static Mat Capture()
     {
         int width = GetSystemMetrics(0);
         int height = GetSystemMetrics(1);

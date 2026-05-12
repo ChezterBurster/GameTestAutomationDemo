@@ -7,5 +7,6 @@ public class SmokeTests : TestBase
 
         var modeSelection = MainMenu.GoToOnlinePlay();
         modeSelection.AssertGameModesVisible();
+        MarkTestAsPassed();
     }
 }

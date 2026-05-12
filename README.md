@@ -4,6 +4,7 @@ A computer vision–based automation framework for testing video games and graph
 
 This project demonstrates how to automate user flows in non-DOM environments (such as games) using image recognition and simulated input.
 
+
 ## 🚀 Features
 
 - 🧠 Computer Vision (OpenCV)
@@ -17,7 +18,7 @@ This project demonstrates how to automate user flows in non-DOM environments (su
 
 - **Core** → Orchestration logic
 - **Vision** → Detection via template matching
-- **Input** → Mouse automation
+- **Input** → Mouse automation, GamePad emulation
 - **Tests** → Test cases (XUnit)
 - **Reporting** → Logs and execution artifacts
 - **GameObjects** → PageObjectModel implementation
@@ -29,12 +30,14 @@ This project demonstrates how to automate user flows in non-DOM environments (su
 - OpenCvSharp
 - XUnit
 - WinAPI (mouse input)
+- ViGEm (GamePad input)
 
 ## 📦 Setup
 
-0. Pre-requisits:
+0. Prerequisites:
 
-    -Brawlhalla installed via Steam.
+    - Brawlhalla installed via Steam.
+    - ViGEm driver (You can get it on their official [github releases](https://github.com/nefarius/ViGEmBus/releases))
 
 1. Clone repo:
 
@@ -68,6 +71,8 @@ dotnet test
     }
 ```
 
+![Gif to shocase an example test](ReportExample/smoke_test_demo.gif)
+
 ## 🧠 How It Works
 
 1. Captures screen
@@ -81,7 +86,7 @@ dotnet test
 Each test generates:
 
 - Logs
-- Before/after screenshots
+- Result-dependent screenshots
 - Pass/Fail result
 
 ## ⚠️ Disclaimer
@@ -98,6 +103,35 @@ This project demonstrates:
 - Visual validation strategies
 - Handling non-deterministic environments
 
+## 🔍 Engineering Challenges
+
+### Why image recognition instead of memory reading?
+
+This framework intentionally avoids memory manipulation to remain:
+
+- anti-cheat safe
+- black-box oriented
+- closer to real user interaction
+- Why GamePad emulation?
+
+Many modern games ignore WinAPI keyboard injection due to:
+
+- raw input systems
+- anti-cheat protections
+- direct input polling
+
+To solve this, the framework uses ViGEm virtual controllers.
+
+### Handling non-deterministic systems
+
+Traditional waits are unreliable in games due to:
+
+- frame variance
+- animation timing
+- loading unpredictability
+
+The framework implements polling-based smart waits with configurable thresholds.
+
 ## 👨‍💻 Author
 
-Kevin Rivera
+### Kevin Rivera

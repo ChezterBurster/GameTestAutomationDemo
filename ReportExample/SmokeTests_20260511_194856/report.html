@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<title>SmokeTests</title>
+
+<style>
+
+body
+{background-color: #1e1e1e;
+    color: #110b0b;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1
+{margin-bottom: 10px;
+}
+
+.summary
+{background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.status-pass
+{color: #4caf50;
+    font-weight: bold;
+}
+
+.status-fail
+{color: #f44336;
+    font-weight: bold;
+}
+
+table
+{width: 100%;
+    border-collapse: collapse;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th
+{background-color: #333;
+    text-align: left;
+    padding: 12px;
+}
+
+td
+{padding: 10px;
+    border-top: 1px solid #444;
+    vertical-align: top;
+}
+
+.INFO {color: #64b5f6; }
+.STEP {color: #ffd54f; }
+.WARNING {color: #ffb74d; }
+.ERROR {color: #ef5350; }
+.PASSED {color: #81c784; }
+.DEBUG {color: #ba68c8; }
+
+.screenshot
+{margin-top: 10px;
+    max-width: 500px;
+    border-radius: 8px;
+    border: 1px solid #555;
+}
+
+.exception
+{margin-top: 10px;
+    padding: 10px;
+    background-color: #3a1f1f;
+    border-left: 4px solid #ef5350;
+    white-space: pre-wrap;
+    font-family: Consolas, monospace;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>SmokeTests</h1>
+
+<div class="summary">
+
+    <p>
+        <strong>Status:</strong>
+        <span class="status-pass">
+            PASS
+        </span>
+    </p>
+
+    <p>
+        <strong>Started:</strong>
+        11/05/2026 07:48:56 p. m.
+    </p>
+
+    <p>
+        <strong>Ended:</strong>
+        11/05/2026 07:49:34 p. m.
+    </p>
+
+    <p>
+        <strong>Duration:</strong>
+        37.20s
+    </p>
+
+    <p>
+        <strong>Total Logs:</strong>
+        49
+    </p>
+
+</div>
+
+<table>
+
+<thead>
+<tr>
+    <th>Time</th>
+    <th>Level</th>
+    <th>Message</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+    <td>19:48:56</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        START TEST: SmokeTests
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:48:56</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Starting game...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:48:57</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Launching Brawlhalla via Steam...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:48:57</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Steam_Command_Sent.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194857202_Steam_Command_Sent.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:48:57</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Steam launch command sent
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:48:57</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Before_loading_screen.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194857269_Before_loading_screen.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:48:57</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Waiting for 'loading_screen'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:05</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        Assertion passed: 'Point { X = 740, Y = 539 }' found
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:05</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: After_loading_screen.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194905648_After_loading_screen.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:05</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Before_main_menu_logo.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194905784_Before_main_menu_logo.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:05</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Waiting for 'main_menu_logo'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:30</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        Assertion passed: 'Point { X = 960, Y = 195 }' found
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:30</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: After_main_menu_logo.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194930910_After_main_menu_logo.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Before_play_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194931010_Before_play_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Waiting for 'play_button'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        Assertion passed: 'Point { X = 286, Y = 277 }' found
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: After_play_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194931327_After_play_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Before_play_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194931427_Before_play_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Waiting for 'play_button'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        Assertion passed: 'Point { X = 286, Y = 277 }' found
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: After_play_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194931709_After_play_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Clicking on 'play_button'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:31</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: AfterClicking_play_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194931897_AfterClicking_play_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Before_mode_selection_title.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194932268_Before_mode_selection_title.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Waiting for 'mode_selection_title'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        Assertion passed: 'Point { X = 947, Y = 245 }' found
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: After_mode_selection_title.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194932520_After_mode_selection_title.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Before_1v1_strikeout_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194932586_Before_1v1_strikeout_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Waiting for '1v1_strikeout_button'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        Assertion passed: 'Point { X = 796, Y = 590 }' found
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: After_1v1_strikeout_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194932866_After_1v1_strikeout_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Before_free_for_all_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194932933_Before_free_for_all_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:32</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Waiting for 'free_for_all_button'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        Assertion passed: 'Point { X = 364, Y = 585 }' found
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: After_free_for_all_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194933201_After_free_for_all_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Before_friendly_2v2_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194933266_Before_friendly_2v2_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Waiting for 'friendly_2v2_button'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        Assertion passed: 'Point { X = 1204, Y = 599 }' found
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: After_friendly_2v2_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194933533_After_friendly_2v2_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Before_unranked_1v1_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194933599_Before_unranked_1v1_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Waiting for 'unranked_1v1_button'...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        Assertion passed: 'Point { X = 1617, Y = 598 }' found
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: After_unranked_1v1_button.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194933867_After_unranked_1v1_button.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Mode Selection screen loaded.
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: End_of_Test.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194933935_End_of_Test.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Closing game...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:33</td>
+
+    <td class="STEP">
+        STEP
+    </td>
+
+    <td>
+        Closing Brawlhalla...
+
+        
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:34</td>
+
+    <td class="INFO">
+        INFO
+    </td>
+
+    <td>
+        Screenshot saved: Game_Closed.
+
+        <br>
+
+<img class="screenshot"
+     src="screenshots\20260511_194934029_Game_Closed.png"
+     alt="screenshot">
+
+        
+    </td>
+</tr>
+<tr>
+    <td>19:49:34</td>
+
+    <td class="PASSED">
+        PASSED
+    </td>
+
+    <td>
+        TEST PASSED
+
+        
+
+        
+    </td>
+</tr>
+
+
+</tbody>
+
+</table>
+
+</body>
+</html>
