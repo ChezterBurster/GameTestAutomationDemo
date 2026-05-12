@@ -71,7 +71,9 @@ dotnet test
     }
 ```
 
-![Gif to shocase an example test](ReportExample/smoke_test_demo.gif)
+![Gif to shocase an example test](docs/smoke_test_demo.gif)
+
+### 📄 View a sample generated HTML report [here](docs/sample-report.html)
 
 ## 🧠 How It Works
 
